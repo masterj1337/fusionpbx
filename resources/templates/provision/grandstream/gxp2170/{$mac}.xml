@@ -6686,7 +6686,7 @@
 {if isset($contact_groups) ||  isset($contact_users) ||  isset($contact_extensions)}
     <P1526>2</P1526>
 {else}
-    <P1526>0</P1526>
+    <P1526>{$grandstream_ldap_phonebook_key_function}</P1526>
 {/if}
 
     <!-- # Default search mode. 0 - Quick match, 1 - Exact match. Default is 0 -->
@@ -6772,14 +6772,14 @@
 
     <!-- # LDAP Lookup -->
     <!-- # Incoming calls. 0 - No, 1 - Yes. Default is 0 -->
-    <P8035>0</P8035>
+    <P8035>{$grandstream_ldap_lookup_incoming}</P8035>
 
     <!-- # Outgoing calls. 0 - No, 1 - Yes. Default is 0 -->
-    <P8034>0</P8034>
+    <P8034>{$grandstream_ldap_lookup_outgoing}</P8034>
 
     <!-- # Lookup Display Name -->
     <!-- # String -->
-    <P8036>givenName sn title</P8036>
+    <P8036>{$grandstream_ldap_lookup_display_name}</P8036>
 
     <!-- # Exact Match Search. . 0 - No, 1 - Yes. Default is 0 -->
     <!-- # Mandatory -->
